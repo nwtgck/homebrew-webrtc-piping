@@ -5,20 +5,20 @@
 class WebrtcPiping < Formula
   desc "WebRTC tunnel with Piping Server WebRTC signaling"
   homepage "https://github.com/nwtgck/go-webrtc-piping"
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/nwtgck/go-webrtc-piping/releases/download/v0.4.0/webrtc-piping-0.4.0-darwin-arm64.tar.gz"
-      sha256 "9ea376d93a1858d75b2659c22d635507877fe865392a4b015989164f230d46df"
+    if Hardware::CPU.intel?
+      url "https://github.com/nwtgck/go-webrtc-piping/releases/download/v0.5.0/webrtc-piping-0.5.0-darwin-amd64.tar.gz"
+      sha256 "e5de6a0e18fc15e216258401537a4df24b941427c1d604aa637001582337d14b"
 
       def install
         bin.install "webrtc-piping"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nwtgck/go-webrtc-piping/releases/download/v0.4.0/webrtc-piping-0.4.0-darwin-amd64.tar.gz"
-      sha256 "49a6adb6b428fc0f74f82787de9047cc5e01b5c93c939e8db39fb219c873f4c7"
+    if Hardware::CPU.arm?
+      url "https://github.com/nwtgck/go-webrtc-piping/releases/download/v0.5.0/webrtc-piping-0.5.0-darwin-arm64.tar.gz"
+      sha256 "896cea3ee3d76226aa2367be64ce390c53f4677834daf41f4e4b35150c8ec8b1"
 
       def install
         bin.install "webrtc-piping"
@@ -28,24 +28,24 @@ class WebrtcPiping < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/nwtgck/go-webrtc-piping/releases/download/v0.4.0/webrtc-piping-0.4.0-linux-armv6.tar.gz"
-      sha256 "7edebaaa7e3aab7470391b7aaecff5788f96449081aa09458137fc93e9966433"
+      url "https://github.com/nwtgck/go-webrtc-piping/releases/download/v0.5.0/webrtc-piping-0.5.0-linux-armv6.tar.gz"
+      sha256 "3a7b993f97891d401972cf26b83d5f56c3baf46c548635f6a34cc23da9076697"
 
       def install
         bin.install "webrtc-piping"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nwtgck/go-webrtc-piping/releases/download/v0.4.0/webrtc-piping-0.4.0-linux-amd64.tar.gz"
-      sha256 "bdd3d170ee51ee7f596d787aed27d525a28419081b6fa5f54a450b6dc471c2c6"
+      url "https://github.com/nwtgck/go-webrtc-piping/releases/download/v0.5.0/webrtc-piping-0.5.0-linux-amd64.tar.gz"
+      sha256 "922ec08da54e6fc0dd7f896412f5e780d98599b6bfd2dfe2a1ff342f645f198d"
 
       def install
         bin.install "webrtc-piping"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nwtgck/go-webrtc-piping/releases/download/v0.4.0/webrtc-piping-0.4.0-linux-arm64.tar.gz"
-      sha256 "e9ef3b34404c817ba01c67a3155b03e309e11d181ab25d61b6011cb27921ba76"
+      url "https://github.com/nwtgck/go-webrtc-piping/releases/download/v0.5.0/webrtc-piping-0.5.0-linux-arm64.tar.gz"
+      sha256 "12a90bdf9fd25cf7bbe835da4003caad3aad71bb52afbd42961c100ddf451273"
 
       def install
         bin.install "webrtc-piping"
